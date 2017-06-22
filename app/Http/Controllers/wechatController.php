@@ -52,26 +52,27 @@ class wechatController extends Controller
                             $newsArr[] = $news;
                             return $newsArr;
                         }
+                    } else {
+                        return "这个问题太深奥了，机器人已经无能为力了~";
                     }
-                    return '奇怪';
                     break;
                 case 'image':
                     return $message->PicUrl;
                     break;
                 case 'voice':
-                    return '收到语音消息';
+                    return '暂时处理不了语音信息哦~';
                     break;
                 case 'video':
-                    return '收到视频消息';
+                    return '暂时处理不了视频信息哦~';
                     break;
                 case 'location':
-                    return '收到坐标消息';
+                    return '发个位置给我，想要约我么~';
                     break;
                 case 'link':
-                    return '收到链接消息';
+                    return '呜呜~暂时打不开这个链接';
                     break;
                 default:
-                    return '收到其它消息';
+                    return '收到您的消息';
                     break;
             }
         });
